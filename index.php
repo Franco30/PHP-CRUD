@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-       <style>
-            * {
+    <style>
+        * {
                 margin:5px;
             }
 
@@ -11,9 +12,17 @@
             }
         </style>
 </head>
+
 <body>
     <!-- create form -->
     <form action="create.php" method="post">
+        <?php
+            session_start();
+            if(isset($_SESSION['response_message'])) {
+                echo $_SESSION['response_message'];
+                unset($_SESSION['response_message']);
+            }
+        ?>
         <h3>Registration Form</h3>
         <p>FirstName: <input type="text" name="firstname" placeholder="First Name"></p>
         <p>LastName: <input type="text" name="lastname" placeholder="Last Name"></p>
@@ -36,4 +45,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
