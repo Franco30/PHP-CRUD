@@ -10,7 +10,7 @@ include("dbconnection.php"); // include database connection file and open a conn
     address - textarea name attribute */
 
 if( isset($_POST['savedata']) ) {
-    $firstname = mysqli_real_escape_string($conn, $_POST['filename']);
+    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);

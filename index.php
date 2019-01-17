@@ -41,7 +41,9 @@
             <th>Action</th>
         </thead>
         <tbody>
-
+            <?php 
+                        include("retrieve.php");
+            ?>
         </tbody>
     </table>
 </body>
