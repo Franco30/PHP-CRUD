@@ -12,7 +12,7 @@ include("dbconnection.php"); // include database connection file and open a conn
 
 if( isset($_POST['id']) ) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
-    $firstname = mysqli_real_escape_string($conn, $_POST['filename']);
+    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);

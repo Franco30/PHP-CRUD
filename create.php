@@ -15,7 +15,7 @@ if( isset($_POST['savedata']) ) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
 
-    $insert_data = mysqli_query($conn, "INSERT INTO users ( firstname, lastname, email, address) VALUES( '" . $firstname . "','" . $lastname . "','" . $email . "','" . $address . "');");
+    $insert_data = mysqli_query($conn, "INSERT INTO users (firstname, lastname, email, address) VALUES( '" . $firstname . "','" . $lastname . "','" . $email . "','" . $address . "');");
 
     session_start(); // start a session
 

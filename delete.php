@@ -4,7 +4,7 @@ session_start();
 include 'dbconnection.php';
    if (isset($_GET['id'])){
    $id = mysqli_real_escape_string($conn, $_GET['id']);
-   $delete_data = mysqli_query($conn, "DELETE FROM users WHERE user_id= '$id' ");
+   $delete_data = mysqli_query($conn, "DELETE FROM users WHERE user_id=" . $id . ";");
 
  session_start(); // start a session
 
