@@ -15,16 +15,16 @@ if( isset($_POST['savedata']) ) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
 
-    $insert_data = mysqli_query($conn, "INSERT INTO users (firstname, lastname, email, address) VALUES( '" . $firstname . "','" . $lastname . "','" . $email . "','" . $address . "');");
+    $insert_data = mysqli_query($conn, "INSERT INTO users ( firstname, lastname, email, address) VALUES( '" . $firstname . "','" . $lastname . "','" . $email . "','" . $address . "');");
 
     session_start(); // start a session
 
     if($insert_data) {
         // success response
-        $_SESSION['response_message'] = "User has been successfully registered.";
+        $_SESSION['response_message'] = "<span class='badge badge-success'>User has been successfully Registered.</span>";
     } else {
         // failed response
-        $_SESSION['response_message'] = "User creation failed.";
+        $_SESSION['response_message'] = "<span class='badge badge-danger'>User creation Failed.</span>";
     }
 
     header("Location: index.php"); // return to main page

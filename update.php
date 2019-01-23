@@ -24,13 +24,13 @@ if( isset($_POST['id']) ) {
 
     if($update_data) {
         // success response
-        $_SESSION['response_message'] = "User has been successfully updated.";
+        $_SESSION['response_message'] = "<span class='badge badge-success'>User has been successfully updated.</span>";
     } else {
         // failed response
-        $_SESSION['response_message'] = "User modification failed.";
+        $_SESSION['response_message'] = "<span class='badge badge-danger'>User modification failed.</span>";
     }
 
-    header("Location: edit.php"); // return to main page
+    header("Location: index.php"); // return to main page
 }
 
 ?>
